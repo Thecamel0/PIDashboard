@@ -37,7 +37,11 @@ export default function RobotMovement({ status, onGo }: RobotMovementProps) {
           {[
             { ax: 'X-AXIS', val: moveX, setVal: setMoveX },
             { ax: 'Y-AXIS', val: moveY, setVal: setMoveY },
+<<<<<<< HEAD
             { ax: 'ROBOT ANGLE', val: moveZ, setVal: setMoveZ },
+=======
+            { ax: 'Z-AXIS', val: moveZ, setVal: setMoveZ },
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
           ].map(({ ax, val, setVal }) => (
             <div className="move-field" key={ax}>
               <label className="move-field__label">{ax}</label>

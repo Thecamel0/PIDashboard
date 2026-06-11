@@ -170,6 +170,10 @@ body::before {
 }
 .ws-pill-btn:hover {
   filter: brightness(1.2);
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 .ws-pill__dot {
@@ -177,6 +181,10 @@ body::before {
   height: 6px;
   border-radius: 50%;
   background: currentColor;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 6px currentColor;
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* ════════════════════════════════════════
@@ -356,6 +364,10 @@ body::before {
 }
 .apply-btn:hover {
   opacity: 0.88;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 18px var(--cyan-dim);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* ════════════════════════════════════════
@@ -596,6 +608,10 @@ body::before {
 }
 .go-btn:hover {
   opacity: 0.92;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 24px var(--cyan-dim), 0 0 48px rgba(0, 255, 136, 0.15);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
   transform: translateY(-1px);
 }
 .go-btn:active {
@@ -637,6 +653,10 @@ body::before {
 }
 .esp-connect__input:focus {
   border-color: var(--cyan-dim);
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* ════════════════════════════════════════
@@ -705,6 +725,7 @@ body::before {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 /* ── Signal legend bar ─────────────────────────────────────── */
 .graph-page__legend-bar {
   display: flex;
@@ -722,16 +743,39 @@ body::before {
   color: var(--text-mid);
   letter-spacing: 0.05em;
   flex-shrink: 0;
+=======
+/* Chart header bar with title + legend */
+.graph-page__chart-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.graph-page__chart-title {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-hi);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 .graph-page__legend {
   display: flex;
+<<<<<<< HEAD
   gap: 24px;
+=======
+  gap: 20px;
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 .graph-page__legend-item {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   gap: 7px;
   font-size: 12px;
 }
@@ -974,6 +1018,20 @@ body::before {
   background: rgba(0, 255, 136, 0.08) !important;
   border-color: rgba(0, 255, 136, 0.35) !important;
   color: var(--green) !important;
+=======
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-mid);
+  letter-spacing: 0.1em;
+}
+
+.graph-page__legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* Canvas wrapper */
@@ -982,11 +1040,14 @@ body::before {
   position: relative;
   min-height: 300px;
   background: var(--bg-card);
+<<<<<<< HEAD
   cursor: grab;
   user-select: none;
 }
 .graph-page__canvas-wrap:active {
   cursor: grabbing;
+=======
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 .graph-page__canvas {
@@ -1101,6 +1162,10 @@ body::before {
 .copy-btn:hover {
   background: var(--cyan-dim);
   color: #000;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 8px var(--cyan-dim);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 .copy-btn--success {
   background: rgba(0, 255, 136, 0.1);
@@ -1110,6 +1175,10 @@ body::before {
 .copy-btn--success:hover {
   background: var(--green);
   color: #000;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 8px var(--green);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* ── Simulator Toggle Button ── */
@@ -1144,6 +1213,11 @@ body::before {
   transition: box-shadow 0.2s;
 }
 .sim-toggle-btn--active .sim-toggle-btn__dot {
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 6px var(--cyan);
+  animation: pulse-cyan 1.5s infinite alternate;
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 
 /* ── Simulating WS Pill ── */
@@ -1190,6 +1264,10 @@ body::before {
 .save-preset-btn:hover:not(:disabled) {
   background: var(--cyan);
   color: #000;
+<<<<<<< HEAD
+=======
+  box-shadow: 0 0 8px var(--cyan-dim);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
 }
 .save-preset-btn:disabled {
   opacity: 0.35;
@@ -1205,4 +1283,17 @@ body::before {
   font-family: var(--mono);
 }
 
+<<<<<<< HEAD
 /* keyframes pulse-cyan removed */
+=======
+@keyframes pulse-cyan {
+  from {
+    opacity: 0.5;
+    box-shadow: 0 0 2px var(--cyan);
+  }
+  to {
+    opacity: 1;
+    box-shadow: 0 0 10px var(--cyan);
+  }
+}
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4

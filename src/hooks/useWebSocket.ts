@@ -321,6 +321,7 @@ export function useWebSocket(): UseWebSocketReturn {
 
     const ws = wsRef.current;
     if (ws && ws.readyState === WebSocket.OPEN) {
+<<<<<<< HEAD
       let txt = '';
       if (msg.type === 'SET_PID') {
         const p = msg.payload;
@@ -339,6 +340,10 @@ export function useWebSocket(): UseWebSocketReturn {
 
       ws.send(txt);
       console.log('[WS] Sent plain text command:', txt);
+=======
+      ws.send(JSON.stringify(msg));
+      console.log('[WS] Sent:', msg.type);
+>>>>>>> 5ea0336a4e09bfea1a19d0109a68806128562ad4
     } else {
       console.warn('[WS] Cannot send — not connected');
     }
