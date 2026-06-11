@@ -102,7 +102,8 @@ export default function App() {
         </div>
 
         <div className="header__right">
-          <button className="header__nav-btn" onClick={() => navigate('/pid-graph')}>▐▐ PID GRAPH</button>
+          <button className="header__nav-btn" onClick={() => navigate('/ai-tuning')}>AI</button>
+          <button className="header__nav-btn" onClick={() => navigate('/pid-graph')}>PID GRAPH</button>
 
           {/* Simulator Toggle Button */}
           <button 

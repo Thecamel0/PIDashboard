@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import { useWebSocketContext } from '../context/WebSocketContext';
+import { recordRun } from '../hooks/PidRunStore';
 import type { WsStatus, TelemetryPacket, PIDParams } from '../types';
 
 interface LapTimerProps {
@@ -15,13 +17,12 @@ interface RunItem {
 }
 
 export default function LapTimer({ status, telemetry, appliedParams }: LapTimerProps) {
+  const { getHistorySnapshot } = useWebSocketContext();
+
   const [runs, setRuns] = useState<RunItem[]>(() => {
     try {
       const stored = localStorage.getItem('pid_dashboard_runs');
-      return stored ? JSON.parse(stored) : [
-        { id: 1, name: 'Run A-B Test 1', params: 'PP: Kp:1.20 Ki:0.05 Kd:0.10', time: 4.23 },
-        { id: 2, name: 'Run A-B Test 2', params: 'PP: Kp:1.50 Ki:0.05 Kd:0.15', time: 3.87 },
-      ];
+      return stored ? JSON.parse(stored) : [];
     } catch {
       return [];
     }
@@ -104,6 +105,10 @@ export default function LapTimer({ status, telemetry, appliedParams }: LapTimerP
         params: paramStr,
         time: runTime,
       };
+      
+      // Auto-record the run telemetry for AI analysis
+      recordRun(getHistorySnapshot(), appliedParams, newRun.name);
+      
       return [newRun, ...prev];
     });
   };
@@ -122,7 +127,7 @@ export default function LapTimer({ status, telemetry, appliedParams }: LapTimerP
       <div className="panel__header">
         <span className="panel__title">
           <span className="panel__title-icon">◷</span>
-          STM32 PERFORMANCE TIMER
+          Timer
         </span>
         <div className="panel__header-actions">
           <button 
